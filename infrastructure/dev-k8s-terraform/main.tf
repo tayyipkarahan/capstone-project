@@ -151,7 +151,7 @@ resource "aws_instance" "kube-master" {
     iam_instance_profile = module.iam.master_profile_name
     vpc_security_group_ids = [aws_security_group.petclinic-kube-master-sg.id, aws_security_group.petclinic-mutual-sg.id]
     key_name = "clarus"
-    subnet_id = "subnet-00cc3f29808986179subnet-00cc3f29808986179"  # select own subnet_id of us-east-1a
+    subnet_id = "subnet-00cc3f29808986179"  # select own subnet_id of us-east-1a
     availability_zone = "us-east-1a"
     tags = {
         Name = "kube-master"
